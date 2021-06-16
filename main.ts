@@ -1,5 +1,8 @@
 radio.onReceivedValue(function (name, value) {
-    led.toggle(0, 0)
     serial.writeValue(name, value)
+    led.plotBarGraph(
+    value,
+    0
+    )
 })
 radio.setGroup(1)
